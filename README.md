@@ -183,15 +183,36 @@ crashing.
 
 ## Deployment
 
-- **Backend**: Railway or Render, set the same env vars as `.env.example`.
-- **Frontend**: Vercel or Netlify, set `VITE_API_BASE_URL` to your deployed
-  backend URL.
+- **Backend on Render (Docker)**: Render has no native Java buildpack, so the
+  backend ships with a multi-stage `backend/Dockerfile` (Maven build → slim
+  JRE runtime). In the Render dashboard: New → Web Service → connect the repo
+  → set **Root Directory** to `backend` → Render will detect the `Dockerfile`
+  automatically. Add the same environment variables as `.env.example`
+  (`NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`, `NEO4J_DATABASE`,
+  `CORS_ALLOWED_ORIGINS`). Render injects `$PORT` automatically, which
+  `application.properties` already reads via `server.port=${PORT:8080}`.
+- **Backend on Railway (alternative)**: Railway auto-detects Java/Maven
+  without a Dockerfile, so either approach works there.
+- **Frontend**: Vercel or Netlify, root directory `frontend`, set
+  `VITE_API_BASE_URL` to your deployed backend URL.
 
 ## Screenshots
 
-_Add screenshots of People & Skills, Find a Mentor, and Indirect Connections
-here before submitting._
+### People & Skills
+![People Search](screenshots/people-search.png)
+
+### Find a Mentor
+![Mentor Finder](screenshots/mentor-finder.png)
+
+### Indirect Connections
+![Indirect Connections](screenshots/indirect-connections.png)
+
+### Projects
+![Projects](screenshots/projects.png)
+
+### Top Endorsed
+![Top Endorsed](screenshots/top-endorsed.png)
 
 ## Demo
 
-_Add your hosted demo link and screen recording link here before submitting._
+_Add hosted demo link and screen recording link._
