@@ -215,4 +215,5 @@ crashing.
 
 ## Demo
 
-_Add hosted demo link and screen recording link._
+- **Live app**: [https://skill-bridge-pink-seven.vercel.app](https://skill-bridge-pink-seven.vercel.app)
+- **Screen recording**: [Watch the demo video](https://www.loom.com/share/6dd616709252474da96503ae47976f12)
