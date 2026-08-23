@@ -12,7 +12,6 @@ import org.springframework.data.neo4j.core.schema.Node;
 public class Skill {
 
     @Id
-    @GeneratedValue
     private String id;
 
     private String name;

@@ -12,7 +12,6 @@ import org.springframework.data.neo4j.core.schema.Node;
 public class Project {
 
     @Id
-    @GeneratedValue
     private String id;
 
     private String name;

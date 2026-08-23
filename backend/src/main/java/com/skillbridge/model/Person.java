@@ -16,7 +16,6 @@ import java.util.List;
 public class Person {
 
     @Id
-    @GeneratedValue
     private String id;
 
     private String name;
